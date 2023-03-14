@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar producto</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../">Volver a la tienda</a>
+    </header>
+    <main class="container">
+      <h1>Agregar producto</h1>
+      <form id="form" class="form-group">
+        <!-- nombre -->
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
+        <!-- categoria -->
+        <label for="categoria">Categoría</label>
+        <select id="categoria" name="categoria" required>
+          <option value="">Seleccione una categoría</option>
+          <option value="consolas">Consolas</option>
+          <option value="notebooks">Notebooks</option>
+          <option value="camaras">Cámaras</option>
+          <option value="accesorios">Accesorios</option>
+        </select>
+        <!-- precio -->
+        <label for="precio">Precio</label>
+        <input type="number" id="precio" name="precio" required />
+        <!-- descripcion -->
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" name="descripcion" required></textarea>
+        <!-- imagen -->
+        <label for="imagen">Imagen url</label>
+        <input type="text" id="imagen" name="imagen" placeholder="images/phone13.jpg" required />
+        <!-- estrellas -->
+        <label for="estrellas">Estrellas</label>
+        <input type="number" id="estrellas" name="estrellas" min="1" max="5" required />
+        <button type="submit" id="add">Agregar</button>
+      </form>
+    </main>
+    <script src="../connection/addData.js"></script>
+  </body>
+</html>
